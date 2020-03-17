@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <div class="page-header">Weather Dashboard</div>
+    <div class="row">
+        <div class="col-1"></div>
+
+        <!-- Left side bar elements -->
+        <div class="col-4 city-search">
+            <form>
+                <p id="search-text">Search for a City:</p>
+                <div class="row">
+                    <input type="text" id="city-search-box" placeholder="City">
+                    <button type="submit"><i class="fa fa-search" id="search-button"></i></button>
+                </div>
+            </form>
+            <button class="clear-recent">Clear Recent</button>
+            <br>
+            <br>
+            <!-- Div to hold recent search elements -->
+            <div class="recent-search-container">
+
+            </div>
+        </div>
+
+        <!-- Main container on the right elements -->
+        <div class="col-6">
+            <div class="city-box">
+                <div class="row main-row">
+                    <h4 id="current-city">Selected City</h4>
+                    <img id="weather-icon" height="75px" width="75px">
+                </div>
+                <p>Temperature: <span id="current-temperature"></span></p>
+                <p>Humidity: <span id="current-humidity"></span></p>
+                <p>Wind Speed: <span id="current-wind-speed"></span></p>
+            </div>
+            <br>
+            <h4>5-Day Forecast</h4>
+
+            <div class="container">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-header" id="day1">Day 1</div>
+                        <div class="card-body">
+                            <img id="weatherPic1" class="weatherForecastIcon"></img>
+                            <p>Temp: <span id="temperature1"></span></p>
+                            <p>Humidity: <span id="humidity1"></span></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="day2">Day 2</div>
+                        <div class="card-body">
+                            <img id="weatherPic2" class="weatherForecastIcon"></img>
+                            <p>Temp: <span id="temperature2"></span></p>
+                            <p>Humidity: <span id="humidity2"></span></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="day3">Day 3</div>
+                        <div class="card-body">
+                            <img id="weatherPic3" class="weatherForecastIcon"></img>
+                            <p>Temp: <span id="temperature3"></span></p>
+                            <p>Humidity: <span id="humidity3"></span></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="day4">Day 4</div>
+                        <div class="card-body">
+                            <img id="weatherPic4" class="weatherForecastIcon"></img>
+                            <p>Temp: <span id="temperature4"></span></p>
+                            <p>Humidity: <span id="humidity4"></span></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="day5">Day 5</div>
+                        <div class="card-body">
+                            <img id="weatherPic5" class="weatherForecastIcon"></img>
+                            <p>Temp: <span id="temperature5"></span></p>
+                            <p>Humidity: <span id="humidity5"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
